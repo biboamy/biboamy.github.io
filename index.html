@@ -34,9 +34,9 @@
 			<div id="main">
 				<!-- One -->
 					<section id="about">
-						<p>I am currently a research assistance under the supervision of <a href="http://mac.citi.sinica.edu.tw/~yang/">Dr. Yi-Hsuan Yang</a> in <a href="http://mac.citi.sinica.edu.tw/">Music AI Lab</a> at Academia Sinica, Taipei, Taiwan. I apply mechine learning algorithm to Music Information Retrieval(MIR). My current works include music auto-tagging, music transcription and music generation. See my 
-                        <a href="#project">project</a> for details.<br><br>
-                        Before this, I am a web and application developer working at <a href="https://www.advmedia.com.tw/">Adv.Media. </a>We create <a href="#app">interactive multimedia application</a> via AR/VR/MR technology. However, due to my patient for music, I decided to join Music AI Lab and hope to contribute my computer science knowledge to music and audio research.
+						<p>I am currently a research assistance under the supervision of <a href="http://mac.citi.sinica.edu.tw/~yang/">Dr. Yi-Hsuan Yang</a> in <a href="http://musicai.citi.sinica.edu.tw/">Music and AI Lab</a> at Academia Sinica, Taipei, Taiwan. I apply mechine learning algorithm to Music Information Retrieval(MIR). My current works include music auto-tagging, music transcription and music generation. See my 
+                        <a href="#project">projects</a> for details.<br><br>
+                        Before this, I am a web and application developer working at <a href="https://www.advmedia.com.tw/">Adv.Media. </a>We create <a href="#app">interactive multimedia application</a> via AR/VR/MR technology. However, due to my patient for music, I decided to join Music and AI Lab and hope to contribute my computer science knowledge to music and audio research.
 
                         </p>
 
@@ -51,11 +51,11 @@
                                 <br>Advisor: <a href="http://mac.citi.sinica.edu.tw/~yang/">Dr. Yi-Hsuan Yang</a></p>
                                 <p>The music auto-tagging project can be divided into three sub-projects: instrument recognition, genre tagging and emotion tagging.</p>
                                 <!-- Instrument recognition -->
-                                <p><img class="image right" src="images/inst_model.png" style="width: 60%" /><b>Instrument Recognition</b> focuses on polyphonic frame-level instrument tagging, which means the model will predict the presence of instrument in each time step, so that we can know the starting time and ending time of each instrument. We research on using pitch to strengthen the harmonic structure in polyphonic music, which can also benefit instrument recognition result. The model is trained with <a href="https://homes.cs.washington.edu/~thickstn/musicnet.html">MusicNet Dataset</a>. Please visit our <a href="https://biboamy.github.io/instrument-recognition/index.html">demo page</a> for further details.<br>
-                                <br>Second stage of this project is to provide large scale training data. We proposed another join-learning model for training large-scale data. The model is trained with <a href="">Musescore Dataset</a>, a new dataset containing polyphonic audio and midi pairs. (<a href="https://biboamy.github.io/instrument-recognition/demo.html">Result Demo</a>)</p> 
+                                <p><img class="image right" src="images/inst_model.png" style="width: 70%" /><b>Instrument Recognition</b> focuses on polyphonic frame-level instrument tagging. The model will predict the presence of instrument in each time step, so that we can know the starting time and ending time of each instrument. We research on using pitch to strengthen the harmonic structure in polyphonic music, which can also benefit instrument recognition result. The model is trained with <a href="https://homes.cs.washington.edu/~thickstn/musicnet.html">MusicNet Dataset</a>. Please visit our <a href="https://biboamy.github.io/instrument-recognition/index.html">demo page</a> for further details.</p>                                
+                                <p>Second stage of this project is to increase instrument categories. We provide a large scale dataset <a href="">Musescore Dataset</a> to train the model. Musescore Dataset contains over 330,000 pieces of songs with their audio and midi pairs. We also introduced a join-learning model for training this large-scale dataset. Please visit our <a href="https://biboamy.github.io/instrument-recognition/demo.html">demo page</a> to see the result.</p> 
 
                                 <!-- Genre tagging -->
-                                <p><img class="image right" src="images/genre_model.jpg" style="width: 70%" /><b>Music Genre Tagging</b> focuses on music genre and subgenre taggings. For example, given a song from Charlie Parker, except for telling us the song belongs to jazz, the model will also tell us it belongs to Swing and Bebop. We trained the model on the mix of KKBOX private dataset and <a href="https://labrosa.ee.columbia.edu/millionsong/">Million Song Dataset(MSD). </a>Please visit our <a href="">demo page</a> for more details.
+                                <p><img class="image right" src="images/genre_model.jpg" style="width: 70%" /><b>Music Genre Tagging</b> focuses on music genre and subgenre taggings. For example, given a song from Charlie Parker, except for telling us the song belongs to jazz, the model will also tell us it belongs to Swing and Bebop. We trained the model on the mix of KKBOX private dataset and <a href="https://labrosa.ee.columbia.edu/millionsong/">Million Song Dataset(MSD). </a>Please visit our <a href="">project page</a> for more details.
                                 </p>
 
                                 <!-- Emotion tagging -->
@@ -64,16 +64,22 @@
                                 </p>
                             </article>
 
-                            <!-- Domain adaptation -->
-                            <h3><b>Domain Streaming</b></h3>
+                            <!-- Music Streaming -->
+                            <h3><b>Music Streaming</b></h3>
                             <article class="12u 12u$(12)">
-                                <p><img class="image right" src="images/stream_model.png" style="width: 70%" />Music streaming is the extension application of the instrument recognition project. Since the model has already learned the pitch and instrument information, it can further predict which instrument is playing the note in each time step. The streaming result can also extend to msic auto-transcription.</p>
+                                <p><img class="image right" src="images/stream_model.png" style="width: 70%" />Music streaming is the extension application of the instrument recognition project. We proposed a multitask learning model for predicting pitch, instrument and pianorolls at the same time. The pianorolls prediction can also extend to multi-pitch streaming, meaning our model is able to predict which instrument is playing the note in each time step. Please see our <a href="https://arxiv.org/pdf/1710.10814.pdf">paper</a> or <a href="https://github.com/biboamy/instrument-streaming">Github page</a> for more details.</p>
                             </article>
 
-                            <!-- Music Streaming -->
-                            <h3><b>Music Adaptation</b></h3>
+                            <!-- Domain adaptation 
+                            <h3><b>Domain Adaptation</b></h3>
                             <article class="12u 12u$(12)">
                                 <p><img class="image right" src="images/adaptation.png" style="width: 70%" />Domain adaptation is a project trying to bridge the gap between audio domain and synthesis domain. Since real world audio is hard to collect, training machine learning algorithm on synthesized audio can cause less effort. </p>
+                            </article>-->
+
+                            <!-- Music disentanglement -->
+                            <h3><b>Music Disentanglement</b></h3>
+                            <article class="12u 12u$(12)">
+                                <p><img class="image right" src="images/disentanglement.png" style="width: 70%" />Music disentanglement is a project trying to separate and learn the latent vector for timbre and pitch, two fundamental features in music. The learned latent vector can be used in many applications, such as pitch and timbre classification, auto-composing, and music editing. Please visit our demo page for more details. </p>
                             </article>
 
                             <!-- 成大文藝季 -->
@@ -130,7 +136,7 @@
                                 <p>Cooperated with cookie saler to build the cookie demo website.</p>
                             </article>
                             <article class="3u 12u$(3)">
-                                <a href="https://biboamy.github.io/Cookieholic/" class="image fit"><img src="images/cookie.jpg" alt="" /></a>
+                                <a href="https://chengyingprofile.netlify.com/web/html/examanalysis" class="image fit"><img src="images/exam.png" alt="" /></a>
                                 <h3>Exam Analysis</h3>
                                 <p>Cooperated with junior high school for online exam result analysis.</p>
                             </article>
@@ -144,8 +150,26 @@
                                 <tbody>
                                     <tr>
                                         <td class="black">
+                                        <a href="https://arxiv.org/pdf/1710.10814.pdf">Learning Disentangled Representations for Timber and Pitch in Music Audio</a>
+                                        <p class="publication">Yun-Ning Hung, Yi-An Chen, Yi-Hsuan Yang</p>
+                                        <p class="publication">arXiv preprint arXiv:1710.10814</p>
+                                        </td>
+                                        <td>2018 </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="black">
+                                        <a href="https://arxiv.org/pdf/1710.10814.pdf">Multitask learning for frame-level instrument recognition</a>
+                                        <p class="publication">Yun-Ning Hung, Yi-An Chen, Yi-Hsuan Yang</p>
+                                        <p class="publication">arXiv preprint arXiv:1710.10814</p>
+                                        </td>
+                                        <td>2018</br>
+                                            <a href="https://github.com/biboamy/instrument-streaming" class="fab fa-github"><span class="label">Github</span></a>
+                                        </td>
+                                    </tr> 
+                                    <tr>
+                                        <td class="black">
                                         <a href="http://ismir2018.ircam.fr/doc/pdfs/55_Paper.pdf">Frame-level Instrument Recognition by Timbre and Pitch</a>
-                                        <p class="publication">YN Hung, YH Yang</p>
+                                        <p class="publication">Yun-Ning Hung, Yi-Hsuan Yang</p>
                                         <p class="publication">19th International Society for Music Information Retrieval (ISMIR) conference</p>
                                         </td>
                                         <td>2018 <br>
@@ -158,7 +182,7 @@
                                     <tr>
                                         <td class="black">
                                         <a href="https://arxiv.org/pdf/1710.10814.pdf">Hit Song Prediction for Pop Music by Siamese CNN with Ranking Loss</a>
-                                        <p class="publication">LC Yu, YH Yang, YN Hung, YA Chen</p>
+                                        <p class="publication">Lang-Chi Yu, Yi-Hsuan Yang, Yun-Ning Hung, Yi-An Chen</p>
                                         <p class="publication">arXiv preprint arXiv:1710.10814</p>
                                         </td>
                                         <td>2017</td>
