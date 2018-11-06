@@ -52,10 +52,10 @@
                                 <p>The music auto-tagging project can be divided into three sub-projects: instrument recognition, genre tagging and emotion tagging.</p>
                                 <!-- Instrument recognition -->
                                 <p><img class="image right" src="images/inst_model.png" style="width: 70%" /><b>Instrument Recognition</b> focuses on polyphonic frame-level instrument tagging. The model will predict the presence of instrument in each time step, so that we can know the starting time and ending time of each instrument. We research on using pitch to strengthen the harmonic structure in polyphonic music, which can also benefit instrument recognition result. The model is trained with <a href="https://homes.cs.washington.edu/~thickstn/musicnet.html">MusicNet Dataset</a>. Please visit our <a href="https://biboamy.github.io/instrument-recognition/index.html">demo page</a> for further details.</p>                                
-                                <p>Second stage of this project is to increase instrument categories. We provide a large scale dataset <a href="">Musescore Dataset</a> to train the model. Musescore Dataset contains over 330,000 pieces of songs with their audio and midi pairs. We also introduced a join-learning model for training this large-scale dataset. Please visit our <a href="https://biboamy.github.io/instrument-recognition/demo.html">demo page</a> to see the result.</p> 
+                                <p>Second stage of this project is to increase instrument categories. We provide a large scale dataset <a href="">Musescore Dataset</a> to train the model. Musescore Dataset contains over 330,000 pieces of songs with their audio and MIDI pairs. We also introduced a multitask model for training this large-scale dataset. Please visit our <a href="https://biboamy.github.io/instrument-recognition/demo.html">demo page</a> to see the result.</p> 
 
                                 <!-- Genre tagging -->
-                                <p><img class="image right" src="images/genre_model.jpg" style="width: 70%" /><b>Music Genre Tagging</b> focuses on music genre and subgenre taggings. For example, given a song from Charlie Parker, except for telling us the song belongs to jazz, the model will also tell us it belongs to Swing and Bebop. We trained the model on the mix of KKBOX private dataset and <a href="https://labrosa.ee.columbia.edu/millionsong/">Million Song Dataset(MSD). </a>Please visit our <a href="">project page</a> for more details.
+                                <p><img class="image right" src="images/genre_model.jpg" style="width: 70%" /><b>Music Genre Tagging</b> focuses on music genre and subgenre taggings. For example, given a song from Charlie Parker, except for telling us the song belongs to jazz, the model will also tell us it belongs to Swing and Bebop. We trained the model on the mix of KKBOX private dataset and <a href="https://labrosa.ee.columbia.edu/millionsong/">Million Song Dataset(MSD). </a>Please visit our <a href="https://biboamy.github.io/genre-classification/">project page</a> for more details.
                                 </p>
 
                                 <!-- Emotion tagging -->
@@ -67,7 +67,7 @@
                             <!-- Music Streaming -->
                             <h3><b>Music Streaming</b></h3>
                             <article class="12u 12u$(12)">
-                                <p><img class="image right" src="images/stream_model.png" style="width: 70%" />Music streaming is the extension application of the instrument recognition project. We proposed a multitask learning model for predicting pitch, instrument and pianorolls at the same time. The pianorolls prediction can also extend to multi-pitch streaming, meaning our model is able to predict which instrument is playing the note in each time step. Please see our <a href="https://arxiv.org/pdf/1710.10814.pdf">paper</a> or <a href="https://github.com/biboamy/instrument-streaming">Github page</a> for more details.</p>
+                                <p><img class="image right" src="images/stream_model.png" style="width: 70%" />Music streaming is the extension application of the instrument recognition project. We proposed a multitask learning model for predicting pitch, instrument and pianorolls at the same time. The pianorolls prediction can also extend to multi-pitch streaming, meaning our model is able to predict which instrument is playing the note in each time step. Please see our <a href="https://arxiv.org/pdf/1811.01143.pdf">paper</a> or <a href="https://github.com/biboamy/instrument-streaming">Github page</a> for more details.</p>
                             </article>
 
                             <!-- Domain adaptation 
@@ -79,7 +79,7 @@
                             <!-- Music disentanglement -->
                             <h3><b>Music Disentanglement</b></h3>
                             <article class="12u 12u$(12)">
-                                <p><img class="image right" src="images/disentanglement.png" style="width: 70%" />Music disentanglement is a project trying to separate and learn the latent vector for timbre and pitch, two fundamental features in music. The learned latent vector can be used in many applications, such as pitch and timbre classification, auto-composing, and music editing. Please visit our demo page for more details. </p>
+                                <p><img class="image right" src="images/disentanglement.png" style="width: 70%" />In music disentanglement project, we proposed two models for learning timbre and pitch representation, two fundamental features in music. The learned latent vector can be used in many applications, such as pitch and timbre classification, auto-composing, and music editing. Please visit our <a href="https://arxiv.org/pdf/1811.01143.pdf">paper</a> or <a href="https://github.com/biboamy/instrument-streaming">Demo page</a> for more details. </p>
                             </article>
 
                             <!-- 成大文藝季 -->
@@ -121,7 +121,7 @@
                         <h3><b>Website Collection</b></h3>
                         <div class="row">
                             <article class="3u 12u$(3)">
-                                <a href="http://biboamy.github.io/Pinomia/" class="image fit"><img src="images/pinomia.jpg" alt="" /></a>
+                                <a href="https://piyahome.netlify.com/?fbclid=IwAR1dEoqkijhMLMw8MDPtljIsFDmiL5kE0ynv9u4vWY2iFowNIVfskx9ZyyY" class="image fit"><img src="images/pinomia.jpg" alt="" /></a>
                                 <h4>Pinomia</h4>
                                 <p>Advertising website for a hostel in Taiwan. I am responsible for the website font-end.</p>
                             </article>
@@ -158,7 +158,7 @@
                                     </tr>
                                     <tr>
                                         <td class="black">
-                                        <a href="https://arxiv.org/pdf/1710.10814.pdf">Multitask learning for frame-level instrument recognition</a>
+                                        <a href="https://arxiv.org/pdf/1811.01143.pdf">Multitask learning for frame-level instrument recognition</a>
                                         <p class="publication">Yun-Ning Hung, Yi-An Chen, Yi-Hsuan Yang</p>
                                         <p class="publication">arXiv preprint arXiv:1710.10814</p>
                                         </td>
