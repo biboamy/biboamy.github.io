@@ -75,3 +75,9 @@
 		.poptrox-popup .nav-previous:before {
 			margin-top: -1em;
 		}
+	.img_size{
+		width: 100% !important;
+	}
+	.image.left, .image.right{
+		max-width: 100% !important;
+	}

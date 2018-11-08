@@ -42,3 +42,11 @@
 		padding: 6em 3em 3em 3em;
 		width: calc(100% - 25%);
 	}
+
+	.img_size{
+		width: 70% !important; 
+	}
+
+	.s_img_size{
+		width: 30% !important;
+	}
