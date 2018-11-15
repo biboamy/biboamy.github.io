@@ -10,12 +10,20 @@
 		<script src="js/jquery.poptrox.min.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/init.js"></script>
+         <script type="text/javascript">
+            function change(_id){
+                $('section').css("display","none")
+                $(_id).css("display","block")
+            }
+
+        </script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-xlarge.css" />
 		</noscript>
+        
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 	</head>
 	<body id="top">
@@ -23,10 +31,10 @@
 		<!-- Header -->
 			<header id="header">
 				<a href="#" class="image avatar"><img src="images/amy.jpg" alt="" /></a>
-                <h1><a href="#about">Yun-Ning Hung</br>(Amy)</a></h1>
-                <h1><a href="#project">Project</a></h1>
-                <h1><a href="#collection">Collection</a></h1>
-                <h1><a href="#publication">Publication</a></h1>
+                <h1><a href="#" onclick="change('#about');">Yun-Ning Hung</br>(Amy)</a></h1>
+                <h1><a href="#" onclick="change('#project');">Project</a></h1>
+                <h1><a href="#" onclick="change('#collection');">Collection</a></h1>
+                <h1><a href="#" onclick="change('#publication');">Publication</a></h1>
                 <h1><a href="https://biboamy.github.io/amyhung/Yun-Ning Hung (Amy) - CV.pdf">Resume/CV</a></h1>
 			</header>
 
@@ -43,8 +51,8 @@
 					</section>
 				
 				<!-- Two -->
-					<section id="two">
-						<h1 id="project"><b>Project</b></h1>
+					<section id="project" style="display: none;">
+						<h1><b>Project</b></h1>
 						    <h2><b>Music auto-tagging</b></h2>
                             <article class="12u 12u$(12)">
                                 <p style="margin-top: -20px">Collaborators: Machine Learning Research Team, KKBOX Inc
@@ -93,8 +101,8 @@
                             </article>
                     </section>
 
-                    <section id="three">
-                        <h1 id="collection"><b>Web & App Collection</b></h1>
+                    <section id="collection" style="display: none;">
+                        <h1><b>Web & App Collection</b></h1>
                         <!-- Application -->
                         <h3 id="app"><b>Application Collection</b></h3>
                         <div class="row">
@@ -148,8 +156,8 @@
                         </div>
 					</section>
 
-                    <section id="four">
-                        <h2 id="publication">Publication</h2>
+                    <section id="publication" style="display: none;">
+                        <h2>Publication</h2>
                         <div class="table-wrapper">
                             <table>
                                 <tbody>
