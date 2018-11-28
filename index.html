@@ -35,7 +35,7 @@
                 <h1><a href="#" onclick="change('#project');">Project</a></h1>
                 <h1><a href="#" onclick="change('#collection');">Collection</a></h1>
                 <h1><a href="#" onclick="change('#publication');">Publication</a></h1>
-                <h1><a href="https://biboamy.github.io/amyhung/Yun-Ning Hung (Amy) - CV.pdf">Resume/CV</a></h1>
+                <h1><a href="https://biboamy.github.io/Yun-Ning Hung (Amy) - CV.pdf">Resume/CV</a></h1>
 			</header>
 
 		<!-- Main -->
@@ -59,8 +59,8 @@
                                 <br>Advisor: <a href="http://mac.citi.sinica.edu.tw/~yang/">Dr. Yi-Hsuan Yang</a></p>
                                 <p>Music auto-tagging project can be divided into three sub-projects: instrument recognition, genre tagging, and emotion tagging.</p>
                                 <!-- Instrument recognition -->
-                                <p><img class="image right img_size" src="images/inst_model.png" /><b>Instrument Recognition</b> focuses on polyphonic frame-level instrument tagging. The model will predict the presence of instruments in each time step so that we can know the starting time and ending time of each instrument. We proposed to use pitch to strengthen the harmonic structure in polyphonic music, which can also benefit instrument recognition result. The model is trained with <a href="https://homes.cs.washington.edu/~thickstn/musicnet.html">MusicNet Dataset</a>. Please visit our <a href="https://biboamy.github.io/instrument-recognition/index.html">demo page</a> for further details.</p>                                
-                                <p>The second stage of this project is to increase instrument categories. We provide a large-scale dataset, <a href="">Musescore Dataset</a>, to train the model. Musescore Dataset contains over 330,000 pieces of songs with their audio and MIDI pairs. We also introduced a multitask model for training this large-scale dataset. Please visit our <a href="https://biboamy.github.io/instrument-recognition/demo.html">demo page</a> or <a href="https://github.com/biboamy/instrument-streaming">Github </a> to see the result.</p> 
+                                <p><img class="image right img_size" src="images/inst_model.png" /><b>Instrument Recognition</b> focuses on polyphonic frame-level instrument tagging. The model will predict the presence of instruments in each time step so that we can know the starting time and ending time of each instrument. We proposed to use pitch to guide the learning of instrument tags, with the premise that doing so informs the model the notes that are active per frame, and also encourages the model to learn relative rates of energy buildup in the harmonic partials of different instruments. The model is trained with <a href="https://homes.cs.washington.edu/~thickstn/musicnet.html">MusicNet Dataset</a>. Please visit our <a href="https://biboamy.github.io/instrument-recognition/index.html">demo page</a> for further details.</p>                                
+                                <p>The second stage of this project is to increase instrument categories. We provide a large-scale synthesized dataset, <a href="">Musescore Dataset</a>, to train the model. Musescore Dataset contains over 330,000 pieces of songs with their related audio and MIDI pairs. We also introduced a multitask model for training this large-scale dataset. Please visit our <a href="https://biboamy.github.io/instrument-recognition/demo.html">demo page</a> or <a href="https://github.com/biboamy/instrument-streaming">Github </a> to see the result.</p> 
 
                                 <!-- Genre tagging -->
                                 <p><img class="image right img_size" src="images/genre_model.jpg" /><b>Music Genre Tagging</b> focuses on music genre and subgenre taggings. For example, given a song from Charlie Parker, except for telling us the song belongs to jazz, the model will also tell us it belongs to Swing and Bebop. We trained the model on the mix of KKBOX private dataset and <a href="https://labrosa.ee.columbia.edu/millionsong/">Million Song Dataset(MSD). </a>Please visit our <a href="https://biboamy.github.io/genre-classification/">project page</a> for more details.
@@ -68,7 +68,7 @@
 
                                 <!-- Emotion tagging -->
                                 <p>
-                                    <b>Music Emotion Tagging</b> is part of the project for conditional music generation. We train a deep learning model by private dataset for emotion tagging on the audio domain and transfer the tags to MIDI domain by using <a href="https://colinraffel.com/projects/lmd/">Lakh MIDI Dataset(LMD)</a>, which contains large-scale MIDI audio pairs. The MIDI emotion tags will be used as a condition to generate music.   
+                                    <b>Music Emotion Tagging</b> is part of the project for conditional music generation. We train a deep learning model by private dataset for audio emotion tagging and transfer the tags to MIDI domain by using <a href="https://colinraffel.com/projects/lmd/">Lakh MIDI Dataset(LMD)</a>, which contains large-scale MIDI and audio pairs. The MIDI emotion tags will be used as a condition to generate music.   
                                 </p>
                             </article>
 
@@ -104,54 +104,58 @@
                     <section id="collection" style="display: none;">
                         <h1><b>Web & App Collection</b></h1>
                         <!-- Application -->
-                        <h3 id="app"><b>Application Collection</b></h3>
+                        <h2 id="app"><b>Application Collection</b></h2>
                         <div class="row">
-                            <p>I participated in developing the left three applications during my intern and working at <a href="https://www.advmedia.com.tw/">Adv.Media. </a>I was responsible for, dataset management, backend-system design, and AR/VR algorithm development. I used Unity and C# for developing these applications. <br><br>Badgerscale is a student project done in course "Software Engineering" at UW-Madison. We used Ionic framework for developing this application.</p>
-                            <article class="3u 12u$(3)">
-                                <a href="https://itunes.apple.com/us/app/%E5%90%90%E9%B2%81%E7%95%AA%E5%A4%A7%E8%A7%86%E8%A7%89/id1127748789?l=zh&ls=1&mt=8" class="image fit"><img src="images/tulufan.jpg" alt="" /></a>
+                            <article class="12u 12u$(12)">
+                                <a href="https://itunes.apple.com/us/app/%E5%90%90%E9%B2%81%E7%95%AA%E5%A4%A7%E8%A7%86%E8%A7%89/id1127748789?l=zh&ls=1&mt=8" class="image left w_size s_w_size"><img src="images/tulufan.jpg" alt="" /></a>
                                 <h4>吐鲁番大视觉(精简版)</h4>
-                                <p>The project was cooperated with Xinjiang government in China to build an interactive AR/VR applilcation for tourists to explore the ancient city with more fun and convenience.</p>
+                                <p>The project was to build a VR/AR tourist application for Turpan ancient city, leading by Xinjiang government in China, including interactive AR tour, 3D audio guide, and VR story game. The objective is for visitors to explore realistic Palaces and interact with people from 2,000 years ago.</p>
                             </article>
-                            <article class="3u 12u$(3)">
-                                <a href="https://itunes.apple.com/us/app/%E5%B1%85%E5%AE%B6%E6%A0%B8%E5%BF%83%E8%82%8C%E5%8A%9B%E8%A8%93%E7%B7%B4/id1207712247?l=zh&ls=1&mt=8" class="image fit"><img src="images/KMU.jpg" alt="" /></a>
+                            
+                            <article class="12u 12u$(12)">
+                                <a href="https://itunes.apple.com/us/app/%E5%B1%85%E5%AE%B6%E6%A0%B8%E5%BF%83%E8%82%8C%E5%8A%9B%E8%A8%93%E7%B7%B4/id1207712247?l=zh&ls=1&mt=8" class="image left w_size s_w_size"><img src="images/KMU.jpg" alt="" /></a>
                                 <h4>居家核心肌力訓練</h4>
-                                <p>The app is cooperated with Kaohsiung Medical University to build an AR application for at-home core-training. </p>
+                                <p>The app is cooperated with Kaohsiung Medical University to build an AR application for at-home core-training. This application enables users to see the detailed movement of a gesture by changing the dimension or enlarge the 3D demo model. </p>
                             </article>
-                            <article class="3u 12u$(3)">
-                                <a href="https://itunes.apple.com/tw/app/%E7%8E%A9%E7%BE%8E%E5%9B%9E%E6%86%B6/id1247397909?l=en&mt=8" class="image fit"><img src="images/wedding.jpg" alt="" /></a>
+                            <article class="12u 12u$(12)">
+                                <a href="https://itunes.apple.com/tw/app/%E7%8E%A9%E7%BE%8E%E5%9B%9E%E6%86%B6/id1247397909?l=en&mt=8" class="image left w_size s_w_size"><img src="images/wedding.jpg" alt="" /></a>
                                 <h4>完美回憶</h4>
-                                <p>The app is cooperated with wedding company to create a platform for wedding management.</p>
+                                <p>Project done with Adv.Media. The app is cooperated with wedding companies to create a platform for wedding management, including 3D invitations and online wedding dress try-on.</p>
                             </article>
-                            <article class="3u 12u$(3)">
-                                <a href="https://github.com/biboamy/Badgerscalp_App" class="image fit"><img src="images/badger.jpg" alt="" /></a>
+                            <article class="12u 12u$(12)">
+                                <a href="https://github.com/biboamy/Badgerscalp_App" class="image left w_size s_w_size"><img src="images/badger.jpg" alt="" /></a>
                                 <h4>Badgerscalp</h4>
-                                <p>A mobile plattform for students to sell, buy or bid tickets for sport events.</p>
+                                <p>A student project done in course “Software Engineering” given by Prof. Peter Ohmann at UW Madison. It's a mobile platform for students to sell, buy or bid tickets for sports events. I was responsible for front-end development by using Ionic</p>
                             </article>
                         </div>
-
+                        </br></br>
                         <!-- Website -->
-                        <h3><b>Website Collection</b></h3>
+                        <h2><b>Website Collection</b></h2>
                         <div class="row">
-                            <p>I am responsible for front-end development in the following projects. See the website demo for more details. <br><br> Pianomia and Exam Analysis are two projects done when I participated in a student start-up company - Jimbo's Coffeeine<br><br>Family Tree and Cookieholic are two voluntary projects done by myself.</p>
-                            <article class="3u 12u$(3)">
-                                <a href="https://piyahome.netlify.com/?fbclid=IwAR1dEoqkijhMLMw8MDPtljIsFDmiL5kE0ynv9u4vWY2iFowNIVfskx9ZyyY" class="image fit"><img src="images/pinomia.jpg" alt="" /></a>
+                            <article class="12u 12u$(12)">
+                                <a href="https://piyahome.netlify.com/?fbclid=IwAR1dEoqkijhMLMw8MDPtljIsFDmiL5kE0ynv9u4vWY2iFowNIVfskx9ZyyY" class="image left w_size s_w_size"><img src="images/pinomia.jpg" alt="" /></a>
                                 <h3>Pinomia</h3>
                                 <p>Official website for a hostel in Taiwan. </p>
                             </article>
-                            <article class="3u 12u$(3)">
-                                <a href="https://chengyingprofile.netlify.com/web/html/examanalysis" class="image fit"><img src="images/exam.png" alt="" /></a>
+                            <article class="12u 12u$(12)">
+                                <a href="https://chengyingprofile.netlify.com/web/html/examanalysis" class="image left w_size s_w_size"><img src="images/exam.png" alt="" /></a>
                                 <h3>Exam Analysis</h3>
-                                <p>Cooperated with junior high school to create exam analysis system.</p>
+                                <p>Cooperated with junior high schools to create a web platform for analyzing exam data and displaying the data in a user-friendly way.</p>
                             </article>
-                            <article class="3u 12u$(3)">
-                                <a href="https://biboamy.github.io/Family-Tree/" class="image fit"><img src="images/family-tree.jpg" alt="" /></a>
+                            <article class="12u 12u$(12)">
+                                <a href="https://biboamy.github.io/Family-Tree/" class="image left w_size s_w_size"><img src="images/family-tree.jpg" alt="" /></a>
                                 <h3>Family Tree</h3>
-                                <p>Cooperated with NCKU guitar club to build the member management website.</p>
+                                <p>Cooperated with NCKU guitar club to build the member management website, including animation for displaying member relationship.</p>
                             </article>
-                            <article class="3u 12u$(3)">
-                                <a href="https://biboamy.github.io/Cookieholic/" class="image fit"><img src="images/cookie.jpg" alt="" /></a>
+                            <article class="12u 12u$(12)">
+                                <a href="https://biboamy.github.io/Cookieholic/" class="image left w_size s_w_size"><img src="images/cookie.jpg" alt="" /></a>
                                 <h3>Cookieholic</h3>
-                                <p>Cooperated with cookie saler to build the cookie demo website.</p>
+                                <p>Cooperated with the cookie seller to build the official website for selling and displaying products.</p>
+                            </article>
+                            <article class="12u 12u$(12)">
+                                <a href="https://github.com/biboamy/homework_sharing/tree/master/images" class="image left w_size s_w_size"><img src="images/homework.png" alt="" /></a>
+                                <h3>Homework Sharing</h3>
+                                <p>Student project done in course “Web Programming” given by Prof. Chang Tien-Hao at NCKU. It's a social platform for students to exchange their notes, homework or publications. I was responsible for website Front-end development.</p>
                             </article>
                         </div>
 					</section>

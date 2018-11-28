@@ -81,3 +81,6 @@
 	.image.left, .image.right{
 		max-width: 100% !important;
 	}
+	.s_w_size{
+		width: 100% !important;
+	}
