@@ -32,9 +32,9 @@
 			<header id="header">
 				<a href="#" class="image avatar"><img src="images/amy.jpg" alt="" /></a>
                 <h1><a href="#" onclick="change('#about');">Yun-Ning Hung</br>(Amy)</a></h1>
-                <h1><a href="#" onclick="change('#project');">Project</a></h1>
-                <h1><a href="#" onclick="change('#collection');">Collection</a></h1>
-                <h1><a href="#" onclick="change('#publication');">Publication</a></h1>
+                <h1><a href="#" onclick="change('#project');">Research Projects</a></h1>
+                <h1><a href="#" onclick="change('#collection');">Web & App Collections</a></h1>
+                <h1><a href="#" onclick="change('#publication');">Publications</a></h1>
                 <h1><a href="#" onclick="change('#music');">Music</a></h1>
                 <h1><a href="https://biboamy.github.io/Yun-Ning Hung (Amy) - CV.pdf">Resume/CV</a></h1>
 			</header>
@@ -44,8 +44,8 @@
 				<!-- One -->
 					<section id="about">
 						<p>I am currently a research assistant under the supervision of <a href="http://mac.citi.sinica.edu.tw/~yang/">Dr. Yi-Hsuan Yang</a> in <a href="http://musicai.citi.sinica.edu.tw/">Music and AI Lab</a> at Academia Sinica. My research interests are at the intersection of machine learning and music information retrieval. My current works include music auto-tagging, music transcription and music generation. See my 
-                        <a href="#project">projects</a> for details.<br><br>
-                        Before this, I am a web and application developer at <a href="https://www.advmedia.com.tw/">Adv.Media. </a>We try to bring better user experience to <a href="#app">interactive applications</a> by using cutting-edge AR/VR techniques. Besides, I am also an amateur intrument players. I did my bachelor's in Electrical Engineering at <a href="https://web.ncku.edu.tw/index.php?Lang=en"> National Cheng Kung University</a>. 
+                        <a href="#" onclick="change('#project');">projects</a> for details.<br><br>
+                        Before this, I am a web and application developer at <a href="https://www.advmedia.com.tw/">Adv.Media. </a>We try to bring better user experience to <a href="#" onclick="change('#collection');">interactive applications</a> by using cutting-edge AR/VR techniques. Besides, I am also an amateur intrument players. I did my bachelor's in Electrical Engineering at <a href="https://web.ncku.edu.tw/index.php?Lang=en"> National Cheng Kung University</a>. 
 
                         </p>
                         <hr>    
@@ -61,15 +61,15 @@
                                 <p>Music auto-tagging project can be divided into three sub-projects: instrument recognition, genre tagging, and emotion tagging.</p>
                                 <!-- Instrument recognition -->
                                 <p><img class="image right img_size" src="images/inst_model.png" /><b>Instrument Recognition</b> focuses on polyphonic frame-level instrument tagging. The model will predict the presence of instruments in each time step so that we can know the starting time and ending time of each instrument. We proposed to use pitch to guide the learning of instrument tags, with the premise that doing so informs the model the notes that are active per frame, and also encourages the model to learn relative rates of energy buildup in the harmonic partials of different instruments. The model is trained with <a href="https://homes.cs.washington.edu/~thickstn/musicnet.html">MusicNet Dataset</a>. Please visit our <a href="https://biboamy.github.io/instrument-recognition/index.html">demo page</a> for further details.</p>                                
-                                <p>The second stage of this project is to increase instrument categories. We provide a large-scale synthesized dataset, <a href="">Musescore Dataset</a>, to train the model. Musescore Dataset contains over 330,000 pieces of songs with their related audio and MIDI pairs. We also introduced a multitask model for training this large-scale dataset. Please visit our <a href="https://biboamy.github.io/instrument-recognition/demo.html">demo page</a> or <a href="https://github.com/biboamy/instrument-streaming">Github </a> to see the result.</p> 
+                                <p>The second stage of this project is to increase instrument categories. We collected a large-scale synthesized dataset, <a href="">Musescore Dataset</a>, to train the model. Musescore Dataset contains over 330,000 pieces of songs with their related audio and MIDI pairs. Please visit our <a href="https://biboamy.github.io/instrument-recognition/demo.html">demo page</a> to see the result.</p> 
 
                                 <!-- Genre tagging -->
-                                <p><img class="image right img_size" src="images/genre_model.jpg" /><b>Music Genre Tagging</b> focuses on music genre and subgenre taggings. For example, given a song from Charlie Parker, except for telling us the song belongs to jazz, the model will also tell us it belongs to Swing and Bebop. We trained the model on the mix of KKBOX private dataset and <a href="https://labrosa.ee.columbia.edu/millionsong/">Million Song Dataset(MSD). </a>Please visit our <a href="https://biboamy.github.io/genre-classification/">project page</a> for more details.
+                                <p><img class="image right img_size" src="images/genre_model.jpg" /><b>Music Genre Tagging</b> focuses on music genre and subgenre taggings. For example, given a song from Charlie Parker, except for telling us the song belongs to jazz, the model will also tell us it belongs to Swing and Bebop. We trained the model on the mix of private dataset and <a href="https://labrosa.ee.columbia.edu/millionsong/">Million Song Dataset(MSD). </a>Please visit our <a href="https://biboamy.github.io/genre-classification/">project page</a> for more details.
                                 </p>
 
                                 <!-- Emotion tagging -->
                                 <p>
-                                    <b>Music Emotion Tagging</b> is part of the project for conditional music generation. We train a deep learning model by private dataset for audio emotion tagging and transfer the tags to MIDI domain by using <a href="https://colinraffel.com/projects/lmd/">Lakh MIDI Dataset(LMD)</a>, which contains large-scale MIDI and audio pairs. The MIDI emotion tags will be used as a condition to generate music.   
+                                    <b>Music Emotion Tagging</b> is part of the project for music generation. We trained a deep learning model by private dataset for audio emotion tagging (arousal and valence). We transfered the tags to MIDI domain by using <a href="https://colinraffel.com/projects/lmd/">Lakh MIDI Dataset(LMD)</a>, which contains large-scale MIDI and audio pairs. The MIDI emotion tags will then be used as a condition for conditional music generation.   
                                 </p>
                             </article>
 
@@ -78,7 +78,7 @@
                             <h2><b>Multi-pitch Streaming</b></h2>
                             <p style="margin-top: -20px">Advisor: <a href="http://mac.citi.sinica.edu.tw/~yang/">Dr. Yi-Hsuan Yang</a></p>
                             <article class="12u 12u$(12)">
-                                <p><img class="image right img_size" src="images/stream_model.png"/>Music streaming is the extension application of the instrument recognition project. We proposed a multitask learning model for predicting pitch, instrument, and pianorolls at the same time. The pianorolls prediction can also extend to multi-pitch streaming, meaning our model is able to predict which instrument is playing the note in each time step. Please see our <a href="https://arxiv.org/pdf/1811.01143.pdf">paper</a> or <a href="https://github.com/biboamy/instrument-streaming">Github page</a> for more details.</p>
+                                <p><img class="image right img_size" src="images/stream_model.png"/>Music streaming project is the extension application of the instrument recognition project. We proposed a specialized multitask model to predict pitch, instrument, and pianorolls at the same time. By jointly predicting the labels, the model achieves better performance than other single-task models.The predicted pianorolls can also be used to recognize the instrument that plays each individual note event and achieve multiinstrument transcription. Please see our <a href="https://arxiv.org/pdf/1811.01143.pdf">paper</a> or <a href="https://github.com/biboamy/instrument-streaming">Github page</a> for more details.</p>
                             </article>
 
                             <!-- Domain adaptation 
@@ -91,15 +91,17 @@
                             <h2><b>Music Disentanglement</b></h2>
                             <p style="margin-top: -20px">Advisor: <a href="http://mac.citi.sinica.edu.tw/~yang/">Dr. Yi-Hsuan Yang</a></p>
                             <article class="12u 12u$(12)">
-                                <p><img class="image right img_size" src="images/disentanglement.png" />In music disentanglement project, we proposed a deep learning algorithm for learning timbre and pitch representation, two fundamental features in music. The learned representations can be used in many applications, such as pitch and timbre classification, AI auto-composing, and music editing. Please visit our <a href="https://arxiv.org/pdf/1811.01143.pdf">paper</a> for more details. </p>
+                                <p><img class="image right img_size" src="images/disentanglement.png" />For some applications we need a feature representation that is not sensitive to the changes in other features. For example, in cover song identification or query by humming we only need pitch information while in singer identification we only need timbre information. As a result, in this music disentanglement project, we proposed a deep auto-encoder model with adversarial training to learn timbre and pitch invariant representations. Please visit our <a href="https://arxiv.org/pdf/1811.01143.pdf">paper</a> for more details. </p>
                             </article>
                             <hr>
                             <!-- 成大文藝季 -->
+                            <!--
                             <h2><b>Sound of the summer</b></h2>
                             <p style="margin-top: -20px">Collaborators: <a href="http://artcenter.ncku.edu.tw/index.php?Lang=en">NCKU art center</a></p>
                             <article class="12u 12u$(12)">
                                 <p><img class="image right img_size s_img_size" src="images/cklaf.jpg"/>The Sound Of The Summer is a conductive silver ink painting presents at NCKU Art Festival. The painting is designed to interact with audiences. When touching the picture created by silver ink, the pictures will play sound represented the meaning of the picture. </p>
                             </article>
+                            -->
                     </section>
 
                     <section id="collection" style="display: none;">
@@ -116,7 +118,7 @@
                             <article class="12u 12u$(12)">
                                 <a href="https://itunes.apple.com/us/app/%E5%B1%85%E5%AE%B6%E6%A0%B8%E5%BF%83%E8%82%8C%E5%8A%9B%E8%A8%93%E7%B7%B4/id1207712247?l=zh&ls=1&mt=8" class="image left w_size s_w_size"><img src="images/KMU.jpg" alt="" /></a>
                                 <h4>居家核心肌力訓練</h4>
-                                <p>The is an AR application for at-home core training leading by Kaohsiung Medical University. This application enables users to see the detailed movement of a gesture by changing the dimension or enlarge the 3D demo model. I cooperated with front-end designers to build this app by using Unity. I was responsible for backend developement.</p>
+                                <p>The is an AR application for at-home core training leading by Kaohsiung Medical University. This application enables users to see the detailed movement of a gesture by changing the dimension or enlarging the 3D models. I cooperated with front-end designers to build this app by using Unity. I was responsible for backend developement.</p>
                             </article>
                             <article class="12u 12u$(12)">
                                 <a href="https://itunes.apple.com/tw/app/%E7%8E%A9%E7%BE%8E%E5%9B%9E%E6%86%B6/id1247397909?l=en&mt=8" class="image left w_size s_w_size"><img src="images/wedding.jpg" alt="" /></a>
