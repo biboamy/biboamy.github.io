@@ -54,39 +54,7 @@
 				<!-- Two -->
 					<section id="project" style="display: none;">
 						<h1><b>Project</b></h1>
-						    <h2><b>Music auto-tagging</b></h2>
-                            <article class="12u 12u$(12)">
-                                <p style="margin-top: -20px">Collaborators: Machine Learning Research Team, KKBOX Inc
-                                <br>Advisor: <a href="http://mac.citi.sinica.edu.tw/~yang/">Dr. Yi-Hsuan Yang</a></p>
-                                <p>Music auto-tagging project can be divided into three sub-projects: instrument recognition, genre tagging, and emotion tagging.</p>
-                                <!-- Instrument recognition -->
-                                <p><img class="image right img_size" src="images/inst_model.png" /><b>Instrument Recognition</b> focuses on polyphonic frame-level instrument tagging. The model will predict the presence of instruments in each time step so that we can know the starting time and ending time of each instrument. We proposed to use pitch to guide the learning of instrument tags, with the premise that doing so informs the model the notes that are active per frame, and also encourages the model to learn relative rates of energy buildup in the harmonic partials of different instruments. The model is trained with <a href="https://homes.cs.washington.edu/~thickstn/musicnet.html">MusicNet Dataset</a>. Please visit our <a href="https://biboamy.github.io/instrument-recognition/index.html">demo page</a> for further details.</p>                                
-                                <p>The second stage of this project is to increase instrument categories. We collected a large-scale synthesized dataset, <a href="">Musescore Dataset</a>, to train the model. Musescore Dataset contains over 330,000 pieces of songs with their related audio and MIDI pairs. Please visit our <a href="https://biboamy.github.io/instrument-recognition/demo.html">demo page</a> to see the result.</p> 
 
-                                <!-- Genre tagging -->
-                                <p><img class="image right img_size" src="images/genre_model.jpg" /><b>Music Genre Tagging</b> focuses on music genre and subgenre taggings. For example, given a song from Charlie Parker, except for telling us the song belongs to jazz, the model will also tell us it belongs to Swing and Bebop. We trained the model on the mix of private dataset and <a href="https://labrosa.ee.columbia.edu/millionsong/">Million Song Dataset(MSD). </a>Please visit our <a href="https://biboamy.github.io/genre-classification/">project page</a> for more details.
-                                </p>
-
-                                <!-- Emotion tagging -->
-                                <p>
-                                    <b>Music Emotion Tagging</b> is part of the project for music generation. We trained a deep learning model by private dataset for audio emotion tagging (arousal and valence). We transfered the tags to MIDI domain by using <a href="https://colinraffel.com/projects/lmd/">Lakh MIDI Dataset(LMD)</a>, which contains large-scale MIDI and audio pairs. The MIDI emotion tags will then be used as a condition for conditional music generation.   
-                                </p>
-                            </article>
-
-                            <hr>
-                            <!-- Music Streaming -->
-                            <h2><b>Multi-pitch Streaming</b></h2>
-                            <p style="margin-top: -20px">Advisor: <a href="http://mac.citi.sinica.edu.tw/~yang/">Dr. Yi-Hsuan Yang</a></p>
-                            <article class="12u 12u$(12)">
-                                <p><img class="image right img_size" src="images/stream_model.png"/>Music streaming project is the extension application of the instrument recognition project. We proposed a specialized multitask model to predict pitch, instrument, and pianorolls at the same time. By jointly predicting the labels, the model achieves better performance than other single-task models.The predicted pianorolls can also be used to recognize the instrument that plays each individual note event and achieve multiinstrument transcription. Please see our <a href="https://arxiv.org/pdf/1811.01143.pdf">paper</a> or <a href="https://github.com/biboamy/instrument-streaming">Github page</a> for more details.</p>
-                            </article>
-
-                            <!-- Domain adaptation 
-                            <h3><b>Domain Adaptation</b></h3>
-                            <article class="12u 12u$(12)">
-                                <p><img class="image right" src="images/adaptation.png" style="width: 70%" />Domain adaptation is a project trying to bridge the gap between audio domain and synthesis domain. Since real world audio is hard to collect, training machine learning algorithm on synthesized audio can cause less effort. </p>
-                            </article>-->
-                            <hr>
                             <!-- Music disentanglement -->
                             <h2><b>Music Disentanglement</b></h2>
                             <p style="margin-top: -20px">Advisor: <a href="http://mac.citi.sinica.edu.tw/~yang/">Dr. Yi-Hsuan Yang</a></p>
@@ -94,6 +62,56 @@
                                 <p><img class="image right img_size" src="images/disentanglement.png" />For some applications we need a feature representation that is not sensitive to the changes in other features. For example, in cover song identification or query by humming we only need pitch information while in singer identification we only need timbre information. As a result, in this music disentanglement project, we proposed a deep auto-encoder model with adversarial training to learn timbre and pitch invariant representations. Please visit our <a href="https://arxiv.org/pdf/1811.01143.pdf">paper</a> for more details. </p>
                             </article>
                             <hr>
+
+                            <!-- Music Streaming -->
+                            <h2><b>Multi-pitch Streaming</b></h2>
+                            <p style="margin-top: -20px">Advisor: <a href="http://mac.citi.sinica.edu.tw/~yang/">Dr. Yi-Hsuan Yang</a></p>
+                            <article class="12u 12u$(12)">
+                                <p><img class="image right img_size" src="images/stream_model.png"/>Music streaming project is the extension application of the instrument recognition project. We proposed a specialized multitask model to predict pitch, instrument, and pianorolls at the same time. By jointly predicting the labels, the model achieves better performance than other single-task models.The predicted pianorolls can also be used to recognize the instrument that plays each individual note event and achieve multiinstrument transcription. Please see our <a href="https://arxiv.org/pdf/1811.01143.pdf">paper</a> or <a href="https://github.com/biboamy/instrument-streaming">Github page</a> for more details. (Demo coming soon!)</p>
+                            </article>
+                            <hr>
+
+						    <h2><b>Instrument Recognition</b></h2>
+                            <article class="12u 12u$(12)">
+                                <p style="margin-top: -20px">Collaborators: Machine Learning Research Team, KKBOX Inc
+                                <br>Advisor: <a href="http://mac.citi.sinica.edu.tw/~yang/">Dr. Yi-Hsuan Yang</a></p>
+                                <!-- Instrument recognition -->
+                                <p><img class="image right img_size" src="images/inst_model.png" />Instrument Recognition project focuses on polyphonic frame-level instrument tagging. The model will predict the presence of instruments in each time step so that we can know the starting time and ending time of each instrument. We proposed to use pitch to guide the learning of instrument tags, with the premise that doing so informs the model the notes that are active per frame, and also encourages the model to learn relative rates of energy buildup in the harmonic partials of different instruments. The model is trained with <a href="https://homes.cs.washington.edu/~thickstn/musicnet.html">MusicNet Dataset</a>. Please visit our <a href="https://biboamy.github.io/instrument-recognition/index.html">project page</a> for further details.</p>
+
+                                <p>The second stage of this project is to increase instrument categories. We collected a large-scale synthesized dataset, <a href="">Musescore Dataset</a>, to train the model. Musescore Dataset contains over 330,000 pieces of songs with their related audio and MIDI pairs. Please visit our <a href="https://biboamy.github.io/instrument-recognition/demo.html">demo page</a> to see the result.</p>
+                            </article>
+                            <hr> 
+
+                            <h2><b>Music Genre Tagging</b></h2>
+                            <article class="12u 12u$(12)">
+                                <p style="margin-top: -20px">Collaborators: Machine Learning Research Team, KKBOX Inc
+                                <br>Advisor: <a href="http://mac.citi.sinica.edu.tw/~yang/">Dr. Yi-Hsuan Yang</a></p>
+                                <!-- Genre tagging -->
+                                <p><img class="image right img_size" src="images/genre_model.jpg" />This project focuses on music genre and subgenre taggings. For example, given a song from Charlie Parker, except for telling us the song belongs to jazz, the model will also tell us it belongs to Swing and Bebop. We trained the model on the mix of private dataset and <a href="https://labrosa.ee.columbia.edu/millionsong/">Million Song Dataset(MSD). </a>Please visit our <a href="https://biboamy.github.io/genre-classification/">project page</a> for more details.
+                                </p>
+                            </article>
+                            <hr>
+
+                            <h2><b>Music Emotion Tagging</b></h2>
+                            <article class="12u 12u$(12)">
+                                <p style="margin-top: -20px">Collaborators: Machine Learning Research Team, KKBOX Inc
+                                <br>Advisor: <a href="http://mac.citi.sinica.edu.tw/~yang/">Dr. Yi-Hsuan Yang</a></p>
+                                <!-- Emotion tagging -->
+                                <p>
+                                    Music Emotion Tagging is part of the music generation project. We trained a deep learning model by private dataset for audio emotion tagging (arousal and valence). We transfered the tags to MIDI domain by using <a href="https://colinraffel.com/projects/lmd/">Lakh MIDI Dataset(LMD)</a>, which contains large-scale MIDI and audio pairs. The MIDI emotion tags will then be used as a condition for conditional music generation.   
+                                </p>
+                            </article>
+
+                            
+                            
+
+                            <!-- Domain adaptation 
+                            <h3><b>Domain Adaptation</b></h3>
+                            <article class="12u 12u$(12)">
+                                <p><img class="image right" src="images/adaptation.png" style="width: 70%" />Domain adaptation is a project trying to bridge the gap between audio domain and synthesis domain. Since real world audio is hard to collect, training machine learning algorithm on synthesized audio can cause less effort. </p>
+                            </article>-->
+                            <hr>
+                            
                             <!-- 成大文藝季 -->
                             <!--
                             <h2><b>Sound of the summer</b></h2>
@@ -156,7 +174,7 @@
                                 <p>Cooperated with the cookie seller to build the official website for selling and displaying products. I was responsible for building the whole website.</p>
                             </article>
                             <article class="12u 12u$(12)">
-                                <a href="https://github.com/biboamy/homework_sharing/tree/master/images" class="image left w_size s_w_size"><img src="images/homework.png" alt="" /></a>
+                                <a href="https://github.com/biboamy/homework_sharing/" class="image left w_size s_w_size"><img src="images/homework.png" alt="" /></a>
                                 <h3>Homework Sharing</h3>
                                 <p>Student project done in course “Web Programming” given by Prof. Chang Tien-Hao at NCKU. It's a social platform for students to exchange their notes, homework or publications. I was responsible for website front-end development.</p>
                             </article>
@@ -219,15 +237,19 @@
                                 <li>I participated in composing the following music pieces:
                                     <a href="https://soundcloud.com/9xtwxnvlbjtz">Sound Cloud</a> &
                                     <a href="https://streetvoice.com/peisanwang/songs/384646/">Street Voice</a>
+                                    <iframe width="350" height="250" src="https://www.youtube.com/embed/-w2LVPQTtYw"> </iframe>
+                                    <iframe width="350" height="250" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/686212389&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
                                 </li>
+                                <br>
+                                <li>
+                                    Our team got the six place at the song writing competition:<br>
+                                    <iframe width="350" height="250" src="https://www.youtube.com/embed/nW3B2_rCkx0"> </iframe>
+                                </li>
+                                <br>
                                 <li>
                                     Our team got the second the third place at the acoustic song competition:
-                                    <a href="https://www.youtube.com/watch?v=atR6mahvnfI&t=1s">Youtube 1</a> &
-                                    <a href="https://www.youtube.com/watch?v=8TJHUDOZ6iw">Youtube 2</a>
-                                </li>
-                                <li>
-                                    Our team got the six place at the song writing competition:
-                                    <a href="https://www.youtube.com/watch?v=nW3B2_rCkx0">Youtube</a>
+                                    <iframe width="350" height="250" src="https://www.youtube.com/embed/atR6mahvnfI"> </iframe>
+                                    <iframe width="350" height="250" src="https://www.youtube.com/embed/8TJHUDOZ6iw"> </iframe>
                                 </li>
                                 <li>
                                     Resident performer at the <a href="https://imagine-bistro.business.site/?fbclid=IwAR1Mr44F4TQjvAic8PsaA8enftne-l_foJ48cU2FbDMKtlLOPIUbA2Dhlaw">Imagine cafe</a> and <a href="https://www.facebook.com/pres.house/">Pres House</a>
