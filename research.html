@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript">
+
+            $( document ).ready(function() {
+                $("#header").load("html/left_bar.html");
+                $("#footer").load("html/footer.html");
+                $("#script").load("html/ref.html");
+            });
+
+        </script>
+    
+        <!-- Script -->
+        <div id='script'></div>  
+	</head>
+	<body id="top">
+
+		<!-- Header -->
+		<header id="header">
+				
+		</header>
+
+		<!-- Main -->
+			<div id="main">
+                <section id="project">
+                    <h1><b>Project</b></h1>
+                    <!-- Music disentanglement -->
+                    <h2><b>Music Disentanglement</b></h2>
+                    <article class="12u 12u$(12)">
+                        <p style="margin: -20px 0 1em 0">
+                            <a href="https://arxiv.org/pdf/1811.03271.pdf" class="far fa-sticky-note"><span class="label">Paper</span></a>
+                        </p>
+                        <p><img class="image right img_size" src="images/disentanglement.png" />For some applications we need a feature representation that is not sensitive to the changes in other features. For example, in cover song identification or query by humming we only need pitch information while in singer identification we only need timbre information. As a result, in this music disentanglement project, we proposed a deep auto-encoder model with adversarial training to learn timbre and pitch invariant representations. 
+                    </article>
+                    <hr>
+
+                    <!-- Music Streaming -->
+                    <h2><b>Multi-pitch Streaming</b></h2>
+                    <article class="12u 12u$(12)">
+                        <p style="margin: -20px 0 1em 0">
+                            <a href="https://arxiv.org/pdf/1811.01143.pdf" class="far fa-sticky-note"><span class="label">Paper</span></a>
+                            <a href="https://github.com/biboamy/instrument-streaming" class="fab fa-github"><span class="label">Github</span></a>
+                            <a href="https://biboamy.github.io/streaming-demo/main_site/index.html" class="fa fa-globe"><span class="label">Website</span></a>
+                            <a href="https://biboamy.github.io/streaming-demo/source/multitask learning-icassp2019-poster" class="fas fa-file-pdf"><span class="label">Poster</span></a>
+                        </p>
+                        <p><img class="image right img_size" src="images/stream_model.png"/>
+                        In this project, we propose a specialized multitask model to explore the relation between pitch and instrument information. This model can predict pitch, instrument, and pianorolls at the same time. By jointly predicting the labels, the model achieves better performance than other single-task models.The predicted pianorolls can also be used to recognize the instrument that plays each individual note event and achieve multi-instrument transcription. 
+                        </p>
+                        <p style="margin: -10px 0 1em 0">
+                            <li>
+                                <a href="https://biboamy.github.io/instrument-demo/demo.html">Demo: instrument recognition</a>
+                            </li>
+                            <li>
+                                <a href="https://biboamy.github.io/instrument-streaming/website/">Demo: multi-instrument transcription</a>
+                            </li>
+                        </p>
+                    </article>
+                    <hr>
+
+                    <h2><b>Instrument Recognition</b></h2>
+                    <article class="12u 12u$(12)">
+                        <p style="margin: -20px 0 1em 0">
+                            <a href="http://ismir2018.ircam.fr/doc/pdfs/55_Paper.pdf" class="far fa-sticky-note"><span class="label">Paper</span></a>
+                            <a href="https://github.com/biboamy/instrument-prediction" class="fab fa-github"><span class="label">Github</span></a>
+                            <a href="https://biboamy.github.io/instrument-recognition/index.html" class="fa fa-globe"><span class="label">Website</span></a>
+                            <a href="https://biboamy.github.io/instrument-recognition/source/amy-ismir2018-slide.pdf" class="fas fa-file-pdf"><span class="label">Slide</span></a>
+                            <a href="https://biboamy.github.io/instrument-recognition/source/amy-ismir2018-poster.pdf" class="fas fa-file-pdf"><span class="label">Poster</span></a>
+                        </p>
+
+                        <!-- Instrument recognition -->
+                        <p><img class="image right img_size" src="images/inst_model.png" />Instrument Recognition project focuses on polyphonic frame-level instrument tagging. The model will predict the presence of instruments in each time step so that we can know the starting time and ending time of each instrument. We proposed to use pitch to guide the learning of instrument tags, with the premise that doing so informs the model the notes that are active per frame, and also encourages the model to learn relative rates of energy buildup in the harmonic partials of different instruments. The model is trained with <a href="https://homes.cs.washington.edu/~thickstn/musicnet.html">MusicNet Dataset</a>. 
+
+                        <p>The second stage of this project is to increase instrument categories. We collected a large-scale synthesized dataset, <a href="">Musescore Dataset</a>, to train the model. Musescore Dataset contains over 330,000 pieces of songs with their related audio and MIDI pairs. 
+                        <p style="margin: -10px 0 1em 0">
+                            <li>
+                                <a href="https://biboamy.github.io/instrument-demo/demo.html">Demo: instrument recognition</a>
+                            </li>
+                        </p>
+                    </article>
+                    <hr> 
+
+                    <h2><b>Music Genre Tagging</b></h2>
+                    <article class="12u 12u$(12)">
+                        <p style="margin: -20px 0 1em 0">
+                            <a href="https://biboamy.github.io/genre-classification/" class="fa fa-globe"><span class="label">Website</span></a>
+                        </p>
+                        <!-- Genre tagging -->
+                        <p><img class="image right img_size" src="images/genre_model.jpg" />This project focuses on music genre and subgenre taggings. For example, given a song from Charlie Parker, except for telling us the song belongs to jazz, the model will also tell us it belongs to Swing and Bebop. We trained the model on the mix of private dataset and <a href="https://labrosa.ee.columbia.edu/millionsong/">Million Song Dataset(MSD). </a>
+                        </p>
+                    </article>
+                    <hr>
+
+                    <h2><b>Music Atmosphere Tagging</b></h2>
+                    <article class="12u 12u$(12)">
+                        <!-- Emotion tagging -->
+                        <p>
+                            The goal of this project is to give machine the ability to classify the music into different atmosphere tags. The tags can be a variety of moods or situations. For example, given a song "Just Dance" from Lady Gaga, the machine has to give the song following tags: "Happy", "Night Club", "Energetic", "Friday Night". We trained the model on the mix of private dataset and <a href="http://mirg.city.ac.uk/codeapps/the-magnatagatune-dataset">The MagnaTagATune Dataset</a>.
+                        </p>
+                    </article>
+                </section>
+            </div>
+				
+			
+		<!-- Footer -->
+			<footer id="footer">
+				
+			</footer>
+
+	</body>
+</html>

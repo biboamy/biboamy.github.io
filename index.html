@@ -1,274 +1,39 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Amy: Home</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.poptrox.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/init.js"></script>
-         <script type="text/javascript">
-            function change(_id){
-                $('section').css("display","none")
-                $(_id).css("display","block")
-            }
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript">
+
+            $( document ).ready(function() {
+            	$("#script").load("html/ref.html");
+                $("#header").load("html/left_bar.html");
+                $("#footer").load("html/footer.html");
+            });
 
         </script>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-xlarge.css" />
-		</noscript>
+    
+	    <!-- Script -->
+	    <div id='script'></div>    
         
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 	</head>
 	<body id="top">
 
 		<!-- Header -->
-			<header id="header">
-				<a href="#" class="image avatar"><img src="images/amy.jpg" alt="" /></a>
-                <h1><a href="#" onclick="change('#about');">Yun-Ning (Amy) Hung</a></h1>
-                <h1><a href="#" onclick="change('#project');">Research Projects</a></h1>
-                <h1><a href="#" onclick="change('#collection');">Web & App Collections</a></h1>
-                <h1><a href="#" onclick="change('#publication');">Publications</a></h1>
-                <h1><a href="#" onclick="change('#music');">Music</a></h1>
-                <h1><a href="https://biboamy.github.io/Yun-Ning Hung (Amy) - CV.pdf">Resume/CV</a></h1>
-			</header>
+		<header id="header"></header>
 
 		<!-- Main -->
-			<div id="main">
-				<!-- One -->
-					<section id="about">
-						<p>I am currently a research assistant under the supervision of <a href="http://mac.citi.sinica.edu.tw/~yang/">Dr. Yi-Hsuan Yang</a> in <a href="http://musicai.citi.sinica.edu.tw/">Music and AI Lab</a> at Academia Sinica. My research interests are at the intersection of machine learning and music information retrieval. My current works include music auto-tagging, music transcription and cover song identification. See my 
-                        <a href="#" onclick="change('#project');">projects</a> for details.<br><br>
-                        Before this, I am a web and application developer at <a href="https://www.advmedia.com.tw/">Adv.Media. </a>We try to bring better user experience to <a href="#" onclick="change('#collection');">interactive applications</a> by using cutting-edge AR/VR techniques. Besides, I am also an amateur intrument players. I did my bachelor's in Electrical Engineering at <a href="https://web.ncku.edu.tw/index.php?Lang=en"> National Cheng Kung University</a>. 
+		<div id="main">
+			<section id="about">
+				<p>I am currently a research assistant under the supervision of <a href="http://mac.citi.sinica.edu.tw/~yang/">Dr. Yi-Hsuan Yang</a> in <a href="http://musicai.citi.sinica.edu.tw/">Music and AI Lab</a> at Academia Sinica. My research interests are at the intersection of machine learning and music information retrieval. My current works include music auto-tagging, music transcription and cover song identification. See my 
+                <a href="#" onclick="change('#project');">projects</a> for details.<br><br>
+                Before this, I am a web and application developer at <a href="https://www.advmedia.com.tw/">Adv.Media. </a>We try to bring better user experience to <a href="#" onclick="change('#collection');">interactive applications</a> by using cutting-edge AR/VR techniques. Besides, I am also an amateur intrument players. I did my bachelor's in Electrical Engineering at <a href="https://web.ncku.edu.tw/index.php?Lang=en"> National Cheng Kung University</a>. 
 
-                        </p>
-                        <hr>    
-					</section>
-				
-				<!-- Two -->
-					<section id="project" style="display: none;">
-						<h1><b>Project</b></h1>
-
-                            <!-- Music disentanglement -->
-                            <h2><b>Music Disentanglement</b></h2>
-                            <p style="margin-top: -20px">Advisor: <a href="http://mac.citi.sinica.edu.tw/~yang/">Dr. Yi-Hsuan Yang</a></p>
-                            <article class="12u 12u$(12)">
-                                <p><img class="image right img_size" src="images/disentanglement.png" />For some applications we need a feature representation that is not sensitive to the changes in other features. For example, in cover song identification or query by humming we only need pitch information while in singer identification we only need timbre information. As a result, in this music disentanglement project, we proposed a deep auto-encoder model with adversarial training to learn timbre and pitch invariant representations. Please visit our <a href="https://arxiv.org/pdf/1811.01143.pdf">paper</a> for more details. </p>
-                            </article>
-                            <hr>
-
-                            <!-- Music Streaming -->
-                            <h2><b>Multi-pitch Streaming</b></h2>
-                            <p style="margin-top: -20px">Advisor: <a href="http://mac.citi.sinica.edu.tw/~yang/">Dr. Yi-Hsuan Yang</a></p>
-                            <article class="12u 12u$(12)">
-                                <p><img class="image right img_size" src="images/stream_model.png"/>Music streaming project is the extension application of the instrument recognition project. We proposed a specialized multitask model to predict pitch, instrument, and pianorolls at the same time. By jointly predicting the labels, the model achieves better performance than other single-task models.The predicted pianorolls can also be used to recognize the instrument that plays each individual note event and achieve multiinstrument transcription. Please see our <a href="https://arxiv.org/pdf/1811.01143.pdf">paper</a> or <a href="https://github.com/biboamy/instrument-streaming">Github page</a> for more details. (Demo coming soon!)</p>
-                            </article>
-                            <hr>
-
-						    <h2><b>Instrument Recognition</b></h2>
-                            <article class="12u 12u$(12)">
-                                <p style="margin-top: -20px">Collaborators: Machine Learning Research Team, KKBOX Inc
-                                <br>Advisor: <a href="http://mac.citi.sinica.edu.tw/~yang/">Dr. Yi-Hsuan Yang</a></p>
-                                <!-- Instrument recognition -->
-                                <p><img class="image right img_size" src="images/inst_model.png" />Instrument Recognition project focuses on polyphonic frame-level instrument tagging. The model will predict the presence of instruments in each time step so that we can know the starting time and ending time of each instrument. We proposed to use pitch to guide the learning of instrument tags, with the premise that doing so informs the model the notes that are active per frame, and also encourages the model to learn relative rates of energy buildup in the harmonic partials of different instruments. The model is trained with <a href="https://homes.cs.washington.edu/~thickstn/musicnet.html">MusicNet Dataset</a>. Please visit our <a href="https://biboamy.github.io/instrument-recognition/index.html">project page</a> for further details.</p>
-
-                                <p>The second stage of this project is to increase instrument categories. We collected a large-scale synthesized dataset, <a href="">Musescore Dataset</a>, to train the model. Musescore Dataset contains over 330,000 pieces of songs with their related audio and MIDI pairs. Please visit our <a href="https://biboamy.github.io/instrument-recognition/demo.html">demo page</a> to see the result.</p>
-                            </article>
-                            <hr> 
-
-                            <h2><b>Music Genre Tagging</b></h2>
-                            <article class="12u 12u$(12)">
-                                <p style="margin-top: -20px">Collaborators: Machine Learning Research Team, KKBOX Inc
-                                <br>Advisor: <a href="http://mac.citi.sinica.edu.tw/~yang/">Dr. Yi-Hsuan Yang</a></p>
-                                <!-- Genre tagging -->
-                                <p><img class="image right img_size" src="images/genre_model.jpg" />This project focuses on music genre and subgenre taggings. For example, given a song from Charlie Parker, except for telling us the song belongs to jazz, the model will also tell us it belongs to Swing and Bebop. We trained the model on the mix of private dataset and <a href="https://labrosa.ee.columbia.edu/millionsong/">Million Song Dataset(MSD). </a>Please visit our <a href="https://biboamy.github.io/genre-classification/">project page</a> for more details.
-                                </p>
-                            </article>
-                            <hr>
-
-                            <h2><b>Music Emotion Tagging</b></h2>
-                            <article class="12u 12u$(12)">
-                                <p style="margin-top: -20px">Collaborators: Machine Learning Research Team, KKBOX Inc
-                                <br>Advisor: <a href="http://mac.citi.sinica.edu.tw/~yang/">Dr. Yi-Hsuan Yang</a></p>
-                                <!-- Emotion tagging -->
-                                <p>
-                                    Music Emotion Tagging is part of the music generation project. We trained a deep learning model by private dataset for audio emotion tagging (arousal and valence). We transfered the tags to MIDI domain by using <a href="https://colinraffel.com/projects/lmd/">Lakh MIDI Dataset(LMD)</a>, which contains large-scale MIDI and audio pairs. The MIDI emotion tags will then be used as a condition for conditional music generation.   
-                                </p>
-                            </article>
-
-                            
-                            
-
-                            <!-- Domain adaptation 
-                            <h3><b>Domain Adaptation</b></h3>
-                            <article class="12u 12u$(12)">
-                                <p><img class="image right" src="images/adaptation.png" style="width: 70%" />Domain adaptation is a project trying to bridge the gap between audio domain and synthesis domain. Since real world audio is hard to collect, training machine learning algorithm on synthesized audio can cause less effort. </p>
-                            </article>-->
-                            <hr>
-                            
-                            <!-- 成大文藝季 -->
-                            <!--
-                            <h2><b>Sound of the summer</b></h2>
-                            <p style="margin-top: -20px">Collaborators: <a href="http://artcenter.ncku.edu.tw/index.php?Lang=en">NCKU art center</a></p>
-                            <article class="12u 12u$(12)">
-                                <p><img class="image right img_size s_img_size" src="images/cklaf.jpg"/>The Sound Of The Summer is a conductive silver ink painting presents at NCKU Art Festival. The painting is designed to interact with audiences. When touching the picture created by silver ink, the pictures will play sound represented the meaning of the picture. </p>
-                            </article>
-                            -->
-                    </section>
-
-                    <section id="collection" style="display: none;">
-                        <h1><b>Web & App Collections</b></h1>
-                        <!-- Application -->
-                        <h2 id="app"><b>Application Collections</b></h2>
-                        <div class="row">
-                            <article class="12u 12u$(12)">
-                                <a href="https://itunes.apple.com/us/app/%E5%90%90%E9%B2%81%E7%95%AA%E5%A4%A7%E8%A7%86%E8%A7%89/id1127748789?l=zh&ls=1&mt=8" class="image left w_size s_w_size"><img src="images/tulufan.jpg" alt="" /></a>
-                                <h4>吐鲁番大视觉(精简版)</h4>
-                                <p>This is a VR/AR tourist application for Turpan ancient city, leading by Xinjiang government, China. This app includes interactive AR tour, 3D audio guide, and VR story game. I cooperated with front-end designers to build this app by using Unity. I was responsible for dataset management and backend developement.</p>
-                            </article>
-                            
-                            <article class="12u 12u$(12)">
-                                <a href="https://itunes.apple.com/us/app/%E5%B1%85%E5%AE%B6%E6%A0%B8%E5%BF%83%E8%82%8C%E5%8A%9B%E8%A8%93%E7%B7%B4/id1207712247?l=zh&ls=1&mt=8" class="image left w_size s_w_size"><img src="images/KMU.jpg" alt="" /></a>
-                                <h4>居家核心肌力訓練</h4>
-                                <p>The is an AR application for at-home core training leading by Kaohsiung Medical University. This application enables users to see the detailed movement of a gesture by changing the dimension or enlarging the 3D models. I cooperated with front-end designers to build this app by using Unity. I was responsible for backend developement.</p>
-                            </article>
-                            <article class="12u 12u$(12)">
-                                <a href="https://itunes.apple.com/tw/app/%E7%8E%A9%E7%BE%8E%E5%9B%9E%E6%86%B6/id1247397909?l=en&mt=8" class="image left w_size s_w_size"><img src="images/wedding.jpg" alt="" /></a>
-                                <h4>完美回憶</h4>
-                                <p>The app is cooperated with wedding companies to create a platform for wedding management, including 3D invitations and online wedding dress try-on. I cooperated with front-end designers to build this app by using Unity. I was responsible for dataset management and backend developement.</p>
-                            </article>
-                            <article class="12u 12u$(12)">
-                                <a href="https://github.com/biboamy/Badgerscalp_App" class="image left w_size s_w_size"><img src="images/badger.jpg" alt="" /></a>
-                                <h4>Badgerscalp</h4>
-                                <p>A student project done in course “Software Engineering” given by Prof. Peter Ohmann at UW Madison. It's a mobile platform for students to sell, buy or bid tickets for sports events. I was responsible for front-end development by using Ionic</p>
-                            </article>
-                        </div>
-                        </br></br>
-                        <!-- Website -->
-                        <h2><b>Website Collections</b></h2>
-                        <div class="row">
-                            <article class="12u 12u$(12)">
-                                <a href="https://piyahome.netlify.com/?fbclid=IwAR1dEoqkijhMLMw8MDPtljIsFDmiL5kE0ynv9u4vWY2iFowNIVfskx9ZyyY" class="image left w_size s_w_size"><img src="images/pinomia.jpg" alt="" /></a>
-                                <h3>Pinomia</h3>
-                                <p>Official website for a hostel in Taiwan. I was responsible for front-end developement.</p>
-                            </article>
-                            <article class="12u 12u$(12)">
-                                <a href="https://chengyingprofile.netlify.com/web/html/examanalysis" class="image left w_size s_w_size"><img src="images/exam.png" alt="" /></a>
-                                <h3>Exam Analysis</h3>
-                                <p>Cooperated with junior high schools to create a web platform for analyzing students' performance and displaying the data in a user-friendly way. I was responsible for front-end developement.</p>
-                            </article>
-                            <article class="12u 12u$(12)">
-                                <a href="https://biboamy.github.io/Family-Tree/" class="image left w_size s_w_size"><img src="images/family-tree.jpg" alt="" /></a>
-                                <h3>Family Tree</h3>
-                                <p>Cooperated with NCKU guitar club to build the member management website, including animation for displaying member relationship. I was responsible for building the whole website.</p>
-                            </article>
-                            <article class="12u 12u$(12)">
-                                <a href="https://biboamy.github.io/Cookieholic/" class="image left w_size s_w_size"><img src="images/cookie.jpg" alt="" /></a>
-                                <h3>Cookieholic</h3>
-                                <p>Cooperated with the cookie seller to build the official website for selling and displaying products. I was responsible for building the whole website.</p>
-                            </article>
-                            <article class="12u 12u$(12)">
-                                <a href="https://github.com/biboamy/homework_sharing/" class="image left w_size s_w_size"><img src="images/homework.png" alt="" /></a>
-                                <h3>Homework Sharing</h3>
-                                <p>Student project done in course “Web Programming” given by Prof. Chang Tien-Hao at NCKU. It's a social platform for students to exchange their notes, homework or publications. I was responsible for website front-end development.</p>
-                            </article>
-                        </div>
-					</section>
-
-                    <section id="publication" style="display: none;">
-                        <h2>Publication</h2>
-                        <div class="table-wrapper">
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td class="black">
-                                        <a href="https://arxiv.org/pdf/1811.03271.pdf">Learning Disentangled Representations for Timber and Pitch in Music Audio</a>
-                                        <p class="publication">Yun-Ning Hung, Yi-An Chen, Yi-Hsuan Yang</p>
-                                        <p class="publication">arXiv preprint arXiv:1710.10814</p>
-                                        </td>
-                                        <td>2018 </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="black">
-                                        <a href="https://arxiv.org/pdf/1811.01143.pdf">Multitask learning for frame-level instrument recognition</a>
-                                        <p class="publication">Yun-Ning Hung, Yi-An Chen, Yi-Hsuan Yang</p>
-                                        <p class="publication">2019 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</p>
-                                        </td>
-                                        <td>2018</br>
-                                            <a href="https://github.com/biboamy/instrument-streaming" class="fab fa-github"><span class="label">Github</span></a>
-                                        </td>
-                                    </tr> 
-                                    <tr>
-                                        <td class="black">
-                                        <a href="http://ismir2018.ircam.fr/doc/pdfs/55_Paper.pdf">Frame-level Instrument Recognition by Timbre and Pitch</a>
-                                        <p class="publication">Yun-Ning Hung, Yi-Hsuan Yang</p>
-                                        <p class="publication">19th International Society for Music Information Retrieval (ISMIR) conference</p>
-                                        </td>
-                                        <td>2018 <br>
-                                            <a href="https://github.com/biboamy/instrument-prediction" class="fab fa-github"><span class="label">Github</span></a>
-                                            <a href="https://biboamy.github.io/instrument-recognition/index.html" class="fa fa-globe"><span class="label">Website</span></a>
-                                            <a href="https://biboamy.github.io/instrument-recognition/source/amy-ismir2018-slide.pdf" class="fas fa-file-pdf"><span class="label">Slide</span></a>
-                                            <a href="https://biboamy.github.io/instrument-recognition/source/amy-ismir2018-poster.pdf" class="fas fa-file-pdf"><span class="label">Poster</span></a>
-                                        </td>
-                                    </tr> 
-                                    <tr>
-                                        <td class="black">
-                                        <a href="https://arxiv.org/pdf/1710.10814.pdf">Hit Song Prediction for Pop Music by Siamese CNN with Ranking Loss</a>
-                                        <p class="publication">Lang-Chi Yu, Yi-Hsuan Yang, Yun-Ning Hung, Yi-An Chen</p>
-                                        <p class="publication">arXiv preprint arXiv:1710.10814</p>
-                                        </td>
-                                        <td>2017</td>
-                                    </tr> 
-                                </tbody>
-                            </table>
-                        
-                    </section>
-
-                    <section id="music" style="display: none;">
-                        <h2>Music</h2>
-                        <div class="table-wrapper">
-                            <ul>
-                                <li>I participated in composing the following music pieces:
-                                    <a href="https://soundcloud.com/9xtwxnvlbjtz">Sound Cloud</a> &
-                                    <a href="https://streetvoice.com/peisanwang/songs/384646/">Street Voice</a>
-                                    <iframe width="350" height="250" src="https://www.youtube.com/embed/-w2LVPQTtYw"> </iframe>
-                                    <iframe width="350" height="250" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/686212389&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-                                </li>
-                                <br>
-                                <li>
-                                    Our team got the six place at the song writing competition:<br>
-                                    <iframe width="350" height="250" src="https://www.youtube.com/embed/nW3B2_rCkx0"> </iframe>
-                                </li>
-                                <br>
-                                <li>
-                                    Our team got the second the third place at the acoustic song competition:
-                                    <iframe width="350" height="250" src="https://www.youtube.com/embed/atR6mahvnfI"> </iframe>
-                                    <iframe width="350" height="250" src="https://www.youtube.com/embed/8TJHUDOZ6iw"> </iframe>
-                                </li>
-                                <li>
-                                    Resident performer at the <a href="https://imagine-bistro.business.site/?fbclid=IwAR1Mr44F4TQjvAic8PsaA8enftne-l_foJ48cU2FbDMKtlLOPIUbA2Dhlaw">Imagine cafe</a> and <a href="https://www.facebook.com/pres.house/">Pres House</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-            </div>
-				
+                </p>  
+			</section>
+        </div>
 			
 		<!-- Footer -->
-			<footer id="footer">
-				<ul class="icons">
-					<li><a href="https://github.com/biboamy" class="icon fa-github"><span class="label">Github</span></a></li>
-					<li><a href="https://scholar.google.com/citations?view_op=list_works&hl=zh-TW&user=2BhJwLsAAAAJ" class="icon fa-google"><span class="label">Dribbble</span></a></li>
-					<li><a href="mailto:biboamybibo@gmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-                    <li><a href="https://www.linkedin.com/in/yun-ning-hung-6397199b/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-				</ul>
-			</footer>
+		<footer id="footer"></footer>
 
 	</body>
 </html>
